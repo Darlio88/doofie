@@ -25,8 +25,7 @@ export default function App() {
     >
    
       <Stack.Screen name='drawer' component={Drawer}/>
-      <Stack.Screen name='login' component={Login}/>
-      <Stack.Screen name='signup' component={Signup}/>
+   
     </Stack.Navigator>
    </NavigationContainer>
   )

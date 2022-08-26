@@ -1,4 +1,4 @@
-import { StyleSheet, Text,  TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text,  TouchableOpacity, View, ScrollView } from 'react-native'
 import React from 'react'
 
 import Button from '../../components/Button'
@@ -6,7 +6,8 @@ import CustomTextInput from '../../components/CustomTextInput';
 import TextLogo from '../../components/TextLogo';
 const Login = ({navigation}) => {
   return (
-    <View style={{flex:1, justifyContent:'space-around',alignItems:'center'}}>
+  <ScrollView>
+      <View style={{flex:1, justifyContent:'space-around',alignItems:'center'}}>
       <View style={{flex:1,margin:20,justifyContent:'center',alignItems:'center'}}>
        <TextLogo />
       <Text style={{fontSize:12,fontStyle:'italic', color:'#588157'}}>
@@ -17,8 +18,8 @@ const Login = ({navigation}) => {
       </View>
       <View style={{width:'90%',flex:3, justifyContent:'space-between'}}>
     <View>
-    <CustomTextInput placeholder='Email' iconName='user'/>
-       <CustomTextInput placeholder='password' iconName='lock'/>
+    <CustomTextInput placeholder='Email' iconName='mail'/>
+       <CustomTextInput secure={true} placeholder='password' iconName='lock'/>
         <View>
         <Button 
          text='forgot password'
@@ -43,12 +44,13 @@ const Login = ({navigation}) => {
     </View>
        <View style={{flexDirection:'row', marginVertical:24}}>
         <Text style={{fontSize:16}}>Do not have an account?</Text>
-       <TouchableOpacity style={{marginLeft:4}} onPress={()=>(navigation.navigate('signin'))}>
+       <TouchableOpacity style={{marginLeft:4}} onPress={()=>(navigation.navigate('signup'))}>
         <Text style={{color:'blue',fontSize:16, fontWeight:'bold'}}>SIGN UP</Text>
        </TouchableOpacity>
        </View>
       </View>
     </View>
+  </ScrollView>
   )
 }
 

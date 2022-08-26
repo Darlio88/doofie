@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Order from '../screens/Order/Order'
 import CatergoryOrder from '../screens/Order/CatergoryOrder'
+import EachCatergoryOrder from '../screens/Order/EachCatergoryOrder'
+import Cart from '../screens/Order/Cart'
 const Stack = createStackNavigator()
 
 const OrderScreen = () => {
@@ -14,6 +16,8 @@ const OrderScreen = () => {
           catergory:'main-assets'
          }} />
     <Stack.Screen name='catergoryOrder' component={CatergoryOrder} />
+    <Stack.Screen name='eachCatergoryOrder' component={EachCatergoryOrder} />
+    <Stack.Screen name='cart' component={Cart} />
    </Stack.Navigator>
   )
 }

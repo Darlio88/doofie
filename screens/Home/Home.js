@@ -22,6 +22,7 @@ export default function Home({navigation}) {
   elevation={0}
   backgroundColor='red'
   color='white'
+  clicked={()=>navigation.navigate('order')}
      />     
   </View>
   <View style={styles.lowerContainer}>

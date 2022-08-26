@@ -7,8 +7,6 @@ import ImageCard from '../../components/ImageCard';
 
 const Order = (props) => {
 
-  const catergory =props.route.params
-
   return ( 
   <View style={{paddingTop:32}}>
 <FlatList
@@ -16,7 +14,6 @@ data={foodCatergory}
 numColumns={2}
 keyExtractor={(item)=>item.name}
 renderItem={({item}) => (<ImageCard {...props} 
-baseUrl={`https://ik.imagekit.io/x761p7oyp/doofie/${catergory}/`}
 targetScreen='catergoryOrder'
  name={item.name}/>)} 
 />

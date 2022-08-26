@@ -13,8 +13,11 @@ data={catergories[catergory]}
 numColumns={2}
 keyExtractor={(item)=>item.name}
 renderItem={({item}) => (<ImageCard {...props} 
-baseUrl={`https://ik.imagekit.io/x761p7oyp/doofie/${catergory}`}
+targetScreen='eachCatergoryOrder'
+initialCatergory={catergory}
  name={item.name}/>)} 
+ targetScreen='eachCatergoryOrder'
+ 
 />
   </View>
   )

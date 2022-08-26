@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../screens/Home/Home'
+import HomeScreen from './HomeScreen'
 import OrderScreen from './OrderScreen'
 import More from '../screens/More/More'
 import Rewards from '../screens/Rewards/Rewards'
@@ -38,7 +38,7 @@ const BottomTabs = () => {
     >
         <Tab.Screen
          name='home'
-         component={Home} 
+         component={HomeScreen} 
          options={{
           tabBarIcon: ({color, size})=>(<Ionicons name='home-outline' color={color} size={size} />)
          }}
